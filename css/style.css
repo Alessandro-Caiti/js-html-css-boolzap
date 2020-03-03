@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #DFE0D9;
+    position: relative;
+}
+
+.container-top {
+    width: 100%;
+    height: 100px;
+    background-color: #00A093;
+}
+
+.flex {
+    display: flex;
+}
+
+.app-container {
+    width: 85%;
+    height: 95%;
+    position: absolute;
+    top: 2.5%;
+    left: 7.5%;
+    background-image: url("../img/zapbackground.png");
+    background-size: contain;
+}
+
+/* Fine generali */
+
+aside {
+    width: 35%;
+    height: 100%;
+}
+
+.side-header {
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    background-color: #EDEDED;
+}
+
+.avatar {
+    width: 25%;
+    height: 100%;
+}
+
+.avatar img {
+    height: 90%;
+}
+
+.avatar-menu {
+    width: 75%;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.avatar-menu .fas {
+    font-size: 36px;
+    padding-right: 40px;
+    color: #BABABA;
+}
+
+.side-banner {
+    height: 120px;
+    width: 100%;
+    background-color: #99DFFD;
+}
+
+.banner-bell {
+    width: 25%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-bell .fas {
+    font-size: 36px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 50%;
+    color: #99DFFD;
+}
+
+.banner-text {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-text a {
+    color: #5F899C;
+    padding-top: 5px;
+}
+
+.contact-src {
+    height: 60px;
+    width: 100%;
+    background-color: #EDEDED;
+    justify-content: center;
+    align-items: center;
+}
+
+.src-bar {
+    height: 80%;
+    width: 95%;
+    background-color: white;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.src-bar .fas {
+    font-size: 22px;
+    padding: 0 10px;
+    color: #BABABA;
+}
+
+.src-bar span {
+    padding-left: 20px;
+    color: #BABABA;
+}
+
+.contact-menu {
+    height: calc(100% - 280px);
+    width: 100%;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.contact-card {
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.avatar-text {
+    width: 75%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.avatar-name {
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+/* Fine aside */
+
+main {
+    width: 65%;
+    height: 100%;
+}
+
+.main-header {
+    height: 100px;
+    width: 100%;
+    background-color: #EDEDED;
+    border-left: 1px solid #DFE0D9;
+}
+
+.contact-card.active {
+    height: 100%;
+    width: 40%;
+    border: none;
+}
+
+.avatar-menu.active {
+    width: 60%;
+}
+
+.messanger-container {
+    height: calc(100% - 200px);
+    width: 100%;
+    overflow-y: auto;
+}
+
+.user-msg {
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.speaker-msg {
+    width: 100%;
+}
+
+.user-msg-container {
+    padding: 10px 50px;
+}
+
+.speaker-msg-container {
+    padding: 10px 50px;
+}
+
+.user-txt {
+    background-color: #DAFAC2;
+    border-radius: 8px;
+}
+
+.speaker-txt {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.user-txt p,
+.speaker-txt p {
+    padding: 20px 20px 5px;
+}
+
+.msg-time {
+    justify-content: flex-end;
+}
+
+.msg-time p {
+    font-size: 10px;
+    color: #BFC2C3;
+    padding: 0 5px 5px;
+}
+
+
+.main-footer {
+    height: 100px;
+    width: 100%;
+    background-color: #EDEDED;
+    border-left: 1px solid #DFE0D9;
+    align-items: center;
+}
+
+.emoji-container {
+    width: 15%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.write-bar {
+    width: 70%;
+    height: 70%;
+    background-color: white;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.write-bar p {
+    padding: 5px;
+    color: #AEAEAE;
+}
+
+.send-rec-container {
+    width: 15%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-footer .far,
+.main-footer .fas {
+    font-size: 36px;
+    color: #767E81;
+}
