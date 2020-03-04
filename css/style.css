@@ -120,9 +120,15 @@ aside {
     color: #BABABA;
 }
 
-.src-bar span {
-    padding-left: 20px;
-    color: #BABABA;
+.src-bar form {
+    width: 90%;
+    height: 100%;
+}
+
+.src-bar input {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .contact-menu {
@@ -247,9 +253,20 @@ main {
     align-items: center;
 }
 
-.write-bar p {
+/* .write-bar p {
     padding: 5px;
     color: #AEAEAE;
+} */
+
+.write-bar form {
+    width: 100%;
+    height: 100%;
+}
+
+.write-bar input {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 .send-rec-container {
