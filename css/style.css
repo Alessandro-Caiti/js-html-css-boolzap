@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+/* .invisible {
+    display: none;
+} */
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -251,6 +255,7 @@ main {
     background-color: white;
     border-radius: 8px;
     align-items: center;
+    justify-content: center;
 }
 
 /* .write-bar p {
@@ -259,8 +264,9 @@ main {
 } */
 
 .write-bar form {
-    width: 100%;
-    height: 100%;
+    width: 99%;
+    height: 99%;
+
 }
 
 .write-bar input {
@@ -280,4 +286,11 @@ main {
 .main-footer .fas {
     font-size: 36px;
     color: #767E81;
+    cursor: pointer;
+}
+
+/* template */
+
+.template {
+    display: none;
 }
