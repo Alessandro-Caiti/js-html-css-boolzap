@@ -1,25 +1,27 @@
 $(document).ready(function() {
 
     $("#invia").click(function() {
-        var messaggio = $("#msg").val();
-        $("#msg").val("");
-        console.log(messaggio);
-        var msgInviato = $(".template .user-msg").clone();
-        console.log(msgInviato);
-        msgInviato.find(".msg-txt").text(messaggio);
-        msgInviato.find(".txt-time").text(oraInvio());
-        $(".messanger-container").append(msgInviato);
+        // var messaggio = $("#msg").val();
+        // $("#msg").val("");
+        // console.log(messaggio);
+        // var msgInviato = $(".template .user-msg").clone();
+        // console.log(msgInviato);
+        // msgInviato.find(".msg-txt").text(messaggio);
+        // msgInviato.find(".txt-time").text(oraInvio());
+        // $(".messanger-container").append(msgInviato);
+        send();
+        receive();
     });
 
-
-    $("#invia").click(function() {
-        setTimeout(function () {
-            var msgInviato = $(".template .speaker-msg").clone();
-            msgInviato.find(".msg-txt").text("Ok");
-            msgInviato.find(".txt-time").text(oraInvio());
-            $(".messanger-container").append(msgInviato);
-        }, 1000);
-    });
+    $(".messanger-container").animate({ scrollTop: $(".messanger-container").height() })
+    // $("#invia").click(function() {
+    //     setTimeout(function () {
+    //         var msgInviato = $(".template .speaker-msg").clone();
+    //         msgInviato.find(".msg-txt").text("Ok");
+    //         msgInviato.find(".txt-time").text(oraInvio());
+    //         $(".messanger-container").append(msgInviato);
+    //     }, 1000);
+    // });
 
 
     $("#src").keyup(function(event) {
@@ -33,6 +35,26 @@ $(document).ready(function() {
         });
     });
 
+
+    function send() {
+        var messaggio = $("#msg").val();
+        $("#msg").val("");
+        // console.log(messaggio);
+        var msgInviato = $(".template .user-msg").clone();
+        // console.log(msgInviato);
+        msgInviato.find(".msg-txt").text(messaggio);
+        msgInviato.find(".txt-time").text(oraInvio());
+        $(".messanger-container").append(msgInviato);
+    }
+
+    function receive() {
+        setTimeout(function () {
+            var msgInviato = $(".template .speaker-msg").clone();
+            msgInviato.find(".msg-txt").text("Ok");
+            msgInviato.find(".txt-time").text(oraInvio());
+            $(".messanger-container").append(msgInviato);
+        }, 1000);
+    }
 
     function oraInvio() {
         var date = new Date();
@@ -49,6 +71,12 @@ $(document).ready(function() {
       return i;
     }
 
+    // scrollDown da capire ancora
 
+    // function scrollDown() {
+    //     setTimeout(function() {
+    //         $(".messanger-container").animate({ scrollTop: $(".messanger-container").height() })
+    //     }, 1000) ;
+    // }
 
 });
