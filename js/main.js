@@ -58,7 +58,7 @@ $(document).ready(function() {
 
     function oraInvio() {
         var date = new Date();
-        var h = date.getHours();
+        var h = addZero(date.getHours());
         var m = addZero(date.getMinutes());
         var time = (h + ":" + m);
         return time;
