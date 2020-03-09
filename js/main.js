@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+    $("#msg").focus(function() {
+        $("#invia").toggleClass("fa fa-microphone fas fa-paper-plane");
+    }).blur(function() {
+        $("#invia").toggleClass("fa fa-microphone fas fa-paper-plane");
+    });
+
     $("#invia").click(function() {
         // var messaggio = $("#msg").val();
         // $("#msg").val("");
@@ -13,16 +19,12 @@ $(document).ready(function() {
         receive();
     });
 
-    $(".messanger-container").animate({ scrollTop: $(".messanger-container").height() })
-    // $("#invia").click(function() {
-    //     setTimeout(function () {
-    //         var msgInviato = $(".template .speaker-msg").clone();
-    //         msgInviato.find(".msg-txt").text("Ok");
-    //         msgInviato.find(".txt-time").text(oraInvio());
-    //         $(".messanger-container").append(msgInviato);
-    //     }, 1000);
-    // });
-
+    $("#msg").keypress(function(event) {
+        if (event.keyCode == 13) {
+            send();
+            receive();
+        }
+    });
 
     $("#src").keyup(function(event) {
         var carattereFiltro = $(this).val().toLowerCase();
@@ -45,6 +47,7 @@ $(document).ready(function() {
         msgInviato.find(".msg-txt").text(messaggio);
         msgInviato.find(".txt-time").text(oraInvio());
         $(".messanger-container").append(msgInviato);
+        scroll()
     }
 
     function receive() {
@@ -53,6 +56,7 @@ $(document).ready(function() {
             msgInviato.find(".msg-txt").text("Ok");
             msgInviato.find(".txt-time").text(oraInvio());
             $(".messanger-container").append(msgInviato);
+            scroll()
         }, 1000);
     }
 
@@ -71,12 +75,10 @@ $(document).ready(function() {
       return i;
     }
 
-    // scrollDown da capire ancora
+    function scroll() {
+        var pixelScroll = $(".messanger-container").height();
+        $(".messanger-container").scrollTop(pixelScroll);
+    }
 
-    // function scrollDown() {
-    //     setTimeout(function() {
-    //         $(".messanger-container").animate({ scrollTop: $(".messanger-container").height() })
-    //     }, 1000) ;
-    // }
 
 });
