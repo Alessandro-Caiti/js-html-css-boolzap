@@ -29,6 +29,17 @@ $(document).ready(function() {
     });
 
 
+    // selezione dell'utente e della relativa chat
+    $(".contact-card").click(function() {
+        var user = $(this).data("contact");
+        $(".messanger-container").each(function() {
+            if (user == $(this).data("contact")) {
+                $(".messanger-container").removeClass("active");
+                $(this).addClass("active");
+            }
+        });
+    });
+
     // al Click o alla pressione del teasto enter
     // INVIO MESSAGGIO (funzione)
           // Prendere il valore di input
@@ -54,7 +65,7 @@ $(document).ready(function() {
         var templateMsg = $(".template .new-msg").clone();
         templateMsg.find(".msg-txt").text(msgTxt);
         templateMsg.addClass(userSpeaker);
-        $(".messanger-container").append(templateMsg)
+        $(".messanger-container.active").append(templateMsg)
     }
 
 // veccho metoto con funzioni divise invia e ricevi, sopra unificato con addClass

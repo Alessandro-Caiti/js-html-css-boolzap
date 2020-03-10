@@ -177,6 +177,10 @@ main {
     border: none;
 }
 
+.contact-card {
+    cursor: pointer;
+}
+
 .avatar-menu.active {
     width: 60%;
 }
@@ -185,6 +189,11 @@ main {
     height: calc(100% - 200px);
     width: 100%;
     overflow-y: auto;
+    display: none;
+}
+
+.messanger-container.active {
+    display: block;
 }
 
 .new-msg {
