@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-/* .invisible {
-    display: none;
-} */
-
 .container {
     width: 100vw;
     height: 100vh;
@@ -191,35 +187,29 @@ main {
     overflow-y: auto;
 }
 
-.user-msg {
+.new-msg {
     width: 100%;
+}
+
+.user.new-msg {
     justify-content: flex-end;
 }
 
-.speaker-msg {
-    width: 100%;
-}
-
-.user-msg-container {
+.msg-container {
     padding: 10px 50px;
 }
 
-.speaker-msg-container {
-    padding: 10px 50px;
-}
-
-.user-txt {
+.user .txt-container {
     background-color: #DAFAC2;
     border-radius: 8px;
 }
 
-.speaker-txt {
+.speaker .txt-container {
     background-color: #FFFFFF;
     border-radius: 8px;
 }
 
-.user-txt p,
-.speaker-txt p {
+.msg-txt {
     padding: 20px 20px 5px;
 }
 
@@ -257,17 +247,6 @@ main {
     align-items: center;
     justify-content: center;
 }
-
-/* .write-bar p {
-    padding: 5px;
-    color: #AEAEAE;
-} */
-
-/* .write-bar form {
-    width: 99%;
-    height: 99%;
-
-} */
 
 .write-bar input {
     width: 100%;
