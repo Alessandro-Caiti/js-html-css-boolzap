@@ -40,6 +40,15 @@ $(document).ready(function() {
         });
     });
 
+    // cambio utente sopra la chat
+    $(".contact-card").click(function() {
+        var userAvatar = $(this).find("img").attr("src");
+        var userName = $(this).find("h4").text();
+        $(".contact-card.active").find("img").attr("src", userAvatar);
+        $(".contact-card.active").find("h4").text(userName);
+
+    });
+
     // al Click o alla pressione del teasto enter
     // INVIO MESSAGGIO (funzione)
           // Prendere il valore di input
