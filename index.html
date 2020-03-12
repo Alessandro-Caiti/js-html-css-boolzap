@@ -5,6 +5,7 @@
         <title>BoolZap</title>
         <link rel="stylesheet" href="css/style.css">
         <script src="https://kit.fontawesome.com/5e15826193.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="js/main.js" charset="utf-8"></script>
     </head>
@@ -331,9 +332,10 @@
 
         </div>
 
-        <div class="template">
+        <!-- template pre handlebars -->
+        <!-- <div class="template"> -->
 
-            <div class="new-msg flex">
+            <!-- <div class="new-msg flex">
                 <div class="msg-container">
                     <div class="txt-container">
                         <p class="msg-txt">Ciao, come stai?</p>
@@ -347,8 +349,9 @@
                         <span class="remove-msg">Cancella messaggio</span>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
+            <!-- vecchio template per la risposta pre funzione unica -->
             <!-- <div class="speaker-msg flex">
                 <div class="speaker-msg-container">
                     <div class="speaker-txt">
@@ -360,6 +363,27 @@
                 </div>
             </div> -->
 
-        </div>
+        <!-- </div> -->
+
+        <script id="msg-template" type="text/x-handlebars-template">
+
+            <div class="new-msg flex {{sentReceived}}">
+                <div class="msg-container">
+                    <div class="txt-container">
+                        <p class="msg-txt">{{msgText}}</p>
+                        <div class="msg-time flex">
+                            <i class="fas fa-chevron-down msg-options"></i>
+                            <p class="txt-time">15.45</p>
+                        </div>
+                    </div>
+                    <div class="msg-menu flex">
+                        <span>Info messaggio</span>
+                        <span class="remove-msg">Cancella messaggio</span>
+                    </div>
+                </div>
+            </div>
+
+        </script>
+
     </body>
 </html>

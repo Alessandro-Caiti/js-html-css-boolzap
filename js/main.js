@@ -83,12 +83,26 @@ $(document).ready(function() {
         }
     }
 
+    var source = $('#msg-template').html();
+    var template = Handlebars.compile(source);
+
     function newMsg(msgTxt, userSpeaker) {
-        var templateMsg = $(".template .new-msg").clone();
-        templateMsg.find(".msg-txt").text(msgTxt);
-        templateMsg.addClass(userSpeaker);
-        $(".messanger-container.active").append(templateMsg)
+        var msgData = {
+            msgText: msgTxt,
+            sentReceived: userSpeaker
+        };
+
+        var msgTemplate = template(msgData);
+        $('.messanger-container.active').append(msgTemplate);
     }
+
+    // funzione di creazione messaggio pre handlebars
+    // function newMsg(msgTxt, userSpeaker) {
+    //     var templateMsg = $(".template .new-msg").clone();
+    //     templateMsg.find(".msg-txt").text(msgTxt);
+    //     templateMsg.addClass(userSpeaker);
+    //     $(".messanger-container.active").append(templateMsg)
+    // }
 
 // veccho metoto con funzioni divise invia e ricevi, sopra unificato con addClass
 
