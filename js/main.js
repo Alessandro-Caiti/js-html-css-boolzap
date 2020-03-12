@@ -30,8 +30,10 @@ $(document).ready(function() {
 
 
     // selezione dell'utente e della relativa chat
-    $(".contact-card").click(function() {
+    $("aside .contact-card").click(function() {
         var user = $(this).data("contact");
+        $("aside .contact-card").removeClass("active");
+        $(this).addClass("active");
         $(".messanger-container").each(function() {
             if (user == $(this).data("contact")) {
                 $(".messanger-container").removeClass("active");
@@ -41,13 +43,24 @@ $(document).ready(function() {
     });
 
     // cambio utente sopra la chat
-    $(".contact-card").click(function() {
+    $("aside .contact-card").click(function() {
         var userAvatar = $(this).find("img").attr("src");
         var userName = $(this).find("h4").text();
-        $(".contact-card.active").find("img").attr("src", userAvatar);
-        $(".contact-card.active").find("h4").text(userName);
+        $("main .contact-card.active").find("img").attr("src", userAvatar);
+        $("main .contact-card.active").find("h4").text(userName);
 
     });
+
+    // menu messaggi
+        $('.messanger-container').on('click', '.msg-options', function() {
+            $('.msg-options').not(this).parents('.new-msg').find('.msg-menu').removeClass('active');
+            $(this).parents('.new-msg').find('.msg-menu').toggleClass('active');
+            console.log(this);
+        });
+        //  cancella messaggi
+        $(document).on('click', '.remove-msg', function() {
+                    $(this).parents('.new-msg').remove();
+        });
 
     // al Click o alla pressione del teasto enter
     // INVIO MESSAGGIO (funzione)

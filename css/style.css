@@ -131,17 +131,25 @@ aside {
     border: none;
 }
 
-.contact-menu {
+aside .contact-menu {
     height: calc(100% - 280px);
     width: 100%;
     background-color: white;
     overflow-y: auto;
 }
 
-.contact-card {
+aside .contact-card {
     height: 120px;
     width: 100%;
     border-bottom: 1px solid #EDEDED;
+}
+
+aside .contact-card.active {
+    background-color: #EDEDED;
+}
+
+aside .contact-card:hover {
+    background-color: lightgray;
 }
 
 .avatar-text {
@@ -171,7 +179,7 @@ main {
     border-left: 1px solid #DFE0D9;
 }
 
-.contact-card.active {
+main .contact-card.active {
     height: 100%;
     width: 40%;
     border: none;
@@ -198,6 +206,7 @@ main {
 
 .new-msg {
     width: 100%;
+    position: relative;
 }
 
 .user.new-msg {
@@ -223,7 +232,15 @@ main {
 }
 
 .msg-time {
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.msg-time i {
+    color: #BFC2C3;
+    padding: 0 5px;
+    opacity: 0;
+    cursor: pointer;
 }
 
 .msg-time p {
@@ -232,6 +249,31 @@ main {
     padding: 0 5px 5px;
 }
 
+.txt-container:hover i {
+    opacity: 1;
+}
+
+.msg-menu {
+    flex-direction: column;
+    background-color: #EDEDED;
+    border-radius: 8px;
+    position: absolute;
+    display: none;
+}
+
+.msg-menu.active {
+    display: flex;
+}
+
+.msg-menu span {
+    padding: 10px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.msg-menu span:hover {
+    background-color: white;
+}
 
 .main-footer {
     height: 100px;
