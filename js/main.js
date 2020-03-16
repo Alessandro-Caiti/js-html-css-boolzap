@@ -6,37 +6,44 @@ $(document).ready(function() {
         c1: {
             src: "img/avatar_random/avatar1.png",
             name: "Stefano",
-            msg: "Ciao sono Stefano"
+            msg: "Ciao sono Stefano",
+            data: 1
         },
         c2: {
             src: "img/avatar_random/avatar2.png",
             name: "Mario",
-            msg: "Ciao sono Mario"
+            msg: "Ciao sono Mario",
+            data: 2
         },
         c3: {
             src: "img/avatar_random/avatar3.png",
             name: "Giovanni",
-            msg: "Ciao sono Giovanni"
+            msg: "Ciao sono Giovanni",
+            data: 3
         },
         c4: {
             src: "img/avatar_random/avatar4.png",
             name: "Andrea",
-            msg: "Ciao sono Andrea"
+            msg: "Ciao sono Andrea",
+            data: 4
         },
         c5: {
             src: "img/avatar_random/avatar5.png",
             name: "Carlo",
-            msg: "Ciao sono Carlo"
+            msg: "Ciao sono Carlo",
+            data: 5
         },
         c6: {
             src: "img/avatar_random/avatar6.png",
             name: "Gianni",
-            msg: "Ciao sono Gianni"
+            msg: "Ciao sono Gianni",
+            data: 6
         },
         c7: {
             src: "img/avatar_random/avatar7.png",
             name: "Clara",
-            msg: "Ciao sono Clara"
+            msg: "Ciao sono Clara",
+            data: 7
         },
     }
     console.log(contactsDirectory);
