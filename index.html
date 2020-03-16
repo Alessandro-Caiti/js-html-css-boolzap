@@ -386,14 +386,14 @@
         <script id="contact-template" type="text/x-handlebars-template">
             <div class="contact-card flex" data-contact="1">
                 <div class="avatar flex">
-                    <img src="img/avatar_random/avatar1.png" alt="">
+                    <img src={{src}} alt="">
                 </div>
                 <div class="avatar-text flex">
                     <div class="avatar-name flex">
-                        <h4>Stefano</h4>
+                        <h4>{{name}}</h4>
                         <p>17:53</p>
                     </div>
-                    <p>Non poteva essere altrimenti</p>
+                    <p>{{msg}}</p>
                 </div>
             </div>
         </script>

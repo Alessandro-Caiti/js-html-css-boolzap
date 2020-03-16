@@ -43,28 +43,26 @@ $(document).ready(function() {
     var contactSource = $('#contact-template').html();
     var contacTemplate = Handlebars.compile(contactSource);
 
-    // function newContact(contactSrc, contactName, contactMsg) {
-        for (var key in contactsDirectory) {
-            var contactData = key[1];
-            var contactCard = contactsDirectory[key];
-            console.log(contactData);
-            console.log(contactCard);
-            // for (var i in contactCard) {
-            //     var contactName = contactCard.name;
-            //     var contactSrc = contactCard.src;
-            //     var contactMsg = contactCard.msg
-            //     console.log(contactName);
-            //     console.log(contactSrc);
-            //     console.log(contactMsg);
-            // }
-        }
+    for (var key in contactsDirectory) {
+        var contactData = key[1];
+        var contactCard = contactsDirectory[key];
+        console.log(contactData);
+        console.log(contactCard);
+        newContact();
+        // for (var i in contactCard) {
+        //     var contactName = contactCard.name;
+        //     var contactSrc = contactCard.src;
+        //     var contactMsg = contactCard.msg
+        //     console.log(contactName);
+        //     console.log(contactSrc);
+        //     console.log(contactMsg);
+        // }
+    }
 
-        // var msgTemplate = template(msgData);
-        // $('.messanger-container.active').append(msgTemplate);
-    // }
-
-
-
+    function newContact() {
+        var newContact = contacTemplate(contactCard);
+        $('.contact-menu').append(newContact);
+    }
 
     $("#msg").focus(function() {
         $("#invia").toggleClass("fa fa-microphone fas fa-paper-plane");
