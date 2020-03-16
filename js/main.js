@@ -1,5 +1,71 @@
 $(document).ready(function() {
 
+    // crea automaticamente schede contatto
+
+    var contactsDirectory = {
+        c1: {
+            src: "img/avatar_random/avatar1.png",
+            name: "Stefano",
+            msg: "Ciao sono Stefano"
+        },
+        c2: {
+            src: "img/avatar_random/avatar2.png",
+            name: "Mario",
+            msg: "Ciao sono Mario"
+        },
+        c3: {
+            src: "img/avatar_random/avatar3.png",
+            name: "Giovanni",
+            msg: "Ciao sono Giovanni"
+        },
+        c4: {
+            src: "img/avatar_random/avatar4.png",
+            name: "Andrea",
+            msg: "Ciao sono Andrea"
+        },
+        c5: {
+            src: "img/avatar_random/avatar5.png",
+            name: "Carlo",
+            msg: "Ciao sono Carlo"
+        },
+        c6: {
+            src: "img/avatar_random/avatar6.png",
+            name: "Gianni",
+            msg: "Ciao sono Gianni"
+        },
+        c7: {
+            src: "img/avatar_random/avatar7.png",
+            name: "Clara",
+            msg: "Ciao sono Clara"
+        },
+    }
+    console.log(contactsDirectory);
+    var contactSource = $('#contact-template').html();
+    var contacTemplate = Handlebars.compile(contactSource);
+
+    // function newContact(contactSrc, contactName, contactMsg) {
+        for (var key in contactsDirectory) {
+            var contactData = key[1];
+            var contactCard = contactsDirectory[key];
+            console.log(contactData);
+            console.log(contactCard);
+            // for (var i in contactCard) {
+            //     var contactName = contactCard.name;
+            //     var contactSrc = contactCard.src;
+            //     var contactMsg = contactCard.msg
+            //     console.log(contactName);
+            //     console.log(contactSrc);
+            //     console.log(contactMsg);
+            // }
+        }
+
+        // var msgTemplate = template(msgData);
+        // $('.messanger-container.active').append(msgTemplate);
+    // }
+
+
+
+
     $("#msg").focus(function() {
         $("#invia").toggleClass("fa fa-microphone fas fa-paper-plane");
     }).blur(function() {
